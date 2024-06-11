@@ -4,6 +4,7 @@ import BlogForm from './components/BlogForm';
 import BlogList from './components/BlogList';
 import SearchBar from './components/SearchBar';
 import PostDetail from './components/PostDetail';
+import NavBar from './components/NavBar';
 import './App.css';
 
 const App = () => {
@@ -47,17 +48,20 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-        <h1>Travel Blog</h1>
-        <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-        <Routes>
-          <Route path="/" element={
-            <>
-              <BlogForm onSave={addPost} editPost={editPost} />
-              <BlogList posts={filteredPosts} onDelete={deletePost} onEdit={editPostHandler} />
-            </>
-          } />
-          <Route path="/post/:id" element={<PostDetail posts={posts} />} />
-        </Routes>
+        <NavBar />
+        <div className="content">
+          <h1>Travel Blog</h1>
+          <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+          <Routes>
+            <Route path="/" element={
+              <>
+                <BlogForm onSave={addPost} editPost={editPost} />
+                <BlogList posts={filteredPosts} onDelete={deletePost} onEdit={editPostHandler} />
+              </>
+            } />
+            <Route path="/post/:id" element={<PostDetail posts={posts} />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );
