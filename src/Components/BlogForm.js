@@ -13,7 +13,7 @@ const BlogForm = ({ onSave, editPost }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSave({ title, content, id: editPost ? editPost.id : Date.now() });
+    onSave({ title, content, id: editPost ? editPost._id : null });
     setTitle('');
     setContent('');
   };

@@ -5,6 +5,7 @@ import BlogList from './components/BlogList';
 import SearchBar from './components/SearchBar';
 import PostDetail from './components/PostDetail';
 import NavBar from './components/NavBar';
+import api from './api';
 import './App.css';
 
 const App = () => {
@@ -13,27 +14,28 @@ const App = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
-    const savedPosts = JSON.parse(localStorage.getItem('posts'));
-    if (savedPosts) {
-      setPosts(savedPosts);
-    }
+    fetchPosts();
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem('posts', JSON.stringify(posts));
-  }, [posts]);
+  const fetchPosts = async () => {
+    const response = await api.get('/blogs');
+    setPosts(response.data);
+  };
 
-  const addPost = (post) => {
+  const addPost = async (post) => {
     if (editPost) {
-      setPosts(posts.map(p => (p.id === post.id ? post : p)));
+      const response = await api.put(`/blogs/${editPost._id}`, post);
+      setPosts(posts.map(p => (p._id === editPost._id ? response.data : p)));
       setEditPost(null);
     } else {
-      setPosts([...posts, post]);
+      const response = await api.post('/blogs', post);
+      setPosts([...posts, response.data]);
     }
   };
 
-  const deletePost = (id) => {
-    setPosts(posts.filter(post => post.id !== id));
+  const deletePost = async (id) => {
+    await api.delete(`/blogs/${id}`);
+    setPosts(posts.filter(post => post._id !== id));
   };
 
   const editPostHandler = (post) => {
