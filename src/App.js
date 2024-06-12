@@ -5,6 +5,7 @@ import SearchBar from './components/SearchBar';
 import PostDetail from './components/PostDetail';
 import NavBar from './components/NavBar';
 import CreatePost from './components/CreatePost';
+import Sidebar from './components/Sidebar';
 import api from './api';
 import './App.css';
 
@@ -17,16 +18,21 @@ const App = () => {
   }, []);
 
   const fetchPosts = async () => {
-    const response = await api.get('/blogs');
-    setPosts(response.data);
+    try {
+      const response = await api.get('/blogs');
+      setPosts(response.data);
+    } catch (error) {
+      console.error("Error fetching posts:", error);
+    }
   };
 
   const addPost = async (post) => {
     try {
       const response = await api.post('/blogs', post);
       setPosts([...posts, response.data]);
+      alert('Great! The post has been created.');
     } catch (error) {
-      console.error("Error uploading post:", error.response.data);
+      console.error("Error uploading post:", error);
     }
   };
 
@@ -35,13 +41,17 @@ const App = () => {
       const response = await api.put(`/blogs/${id}`, post);
       setPosts(posts.map(p => (p._id === id ? response.data : p)));
     } catch (error) {
-      console.error("Error updating post:", error.response.data);
+      console.error("Error updating post:", error);
     }
   };
 
   const deletePost = async (id) => {
-    await api.delete(`/blogs/${id}`);
-    setPosts(posts.filter(post => post._id !== id));
+    try {
+      await api.delete(`/blogs/${id}`);
+      setPosts(posts.filter(post => post._id !== id));
+    } catch (error) {
+      console.error("Error deleting post:", error);
+    }
   };
 
   const filteredPosts = posts.filter(post =>
@@ -49,21 +59,31 @@ const App = () => {
     (post.content && post.content.toLowerCase().includes(searchQuery.toLowerCase()))
   );
 
+  const sidebarLinks = [
+    { image: 'url1.jpg', title: 'Travel Page 1', url: 'http://example1.com' },
+    { image: 'url2.jpg', title: 'Travel Page 2', url: 'http://example2.com' },
+    { image: 'url3.jpg', title: 'Travel Page 3', url: 'http://example3.com' },
+    { image: 'url4.jpg', title: 'Travel Page 4', url: 'http://example4.com' },
+  ];
+
   return (
     <Router>
       <div className="App">
         <NavBar />
-        <div className="content">
-          <h1>Travel Blog</h1>
+        <div className="main-content">
           <Routes>
             <Route path="/" element={
               <>
-                <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-                <BlogList posts={filteredPosts} onDelete={deletePost} />
+                <Sidebar links={sidebarLinks} />
+                <div className="content">
+                  <h1>Travel Blog</h1>
+                  <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+                  <BlogList posts={filteredPosts} onDelete={deletePost} />
+                </div>
               </>
             } />
             <Route path="/create" element={<CreatePost onSave={addPost} />} />
-            <Route path="/post/:id" element={<PostDetail posts={posts} onUpdate={updatePost} />} />
+            <Route path="/post/:id" element={<PostDetail posts={posts} onUpdate={updatePost} setSearchQuery={setSearchQuery} />} />
           </Routes>
         </div>
       </div>

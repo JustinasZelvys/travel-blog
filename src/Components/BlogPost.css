@@ -1,0 +1,33 @@
+.blog-post {
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 4px;
+  }
+  
+  .blog-post-image img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  
+  .blog-post-content {
+    flex: 1;
+  }
+  
+  .blog-post-content h2 {
+    margin: 0 0 10px;
+  }
+  
+  .blog-post-content p {
+    margin: 0 0 20px;
+  }
+  
+  .blog-post-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  

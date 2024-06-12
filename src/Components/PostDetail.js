@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Breadcrumb from './Breadcrumb';
 import BlogForm from './BlogForm';
 
-const PostDetail = ({ posts, onUpdate }) => {
+const PostDetail = ({ posts, onUpdate, setSearchQuery }) => {
   const { id } = useParams();
   const post = posts.find(post => post._id === id);
+
+  useEffect(() => {
+    // Clear the search query when the component mounts
+    setSearchQuery('');
+  }, [setSearchQuery]);
 
   const [isEditing, setIsEditing] = useState(false);
 
