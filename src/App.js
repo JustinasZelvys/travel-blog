@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import BlogForm from './components/BlogForm';
 import BlogList from './components/BlogList';
 import SearchBar from './components/SearchBar';
 import PostDetail from './components/PostDetail';
 import NavBar from './components/NavBar';
+import CreatePost from './components/CreatePost';
 import api from './api';
 import './App.css';
 
 const App = () => {
   const [posts, setPosts] = useState([]);
-  const [editPost, setEditPost] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
@@ -56,14 +55,14 @@ const App = () => {
         <NavBar />
         <div className="content">
           <h1>Travel Blog</h1>
-          <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
           <Routes>
             <Route path="/" element={
               <>
-                <BlogForm onSave={addPost} />
+                <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
                 <BlogList posts={filteredPosts} onDelete={deletePost} />
               </>
             } />
+            <Route path="/create" element={<CreatePost onSave={addPost} />} />
             <Route path="/post/:id" element={<PostDetail posts={posts} onUpdate={updatePost} />} />
           </Routes>
         </div>
