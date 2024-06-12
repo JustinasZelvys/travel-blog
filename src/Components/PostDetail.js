@@ -12,6 +12,7 @@ const PostDetail = ({ posts }) => {
   return (
     <div>
       <h2>{post.title}</h2>
+      {post.imageUrl && <img src={post.imageUrl} alt={post.title} />}
       <p>{post.content}</p>
     </div>
   );

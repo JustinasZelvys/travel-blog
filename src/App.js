@@ -23,13 +23,18 @@ const App = () => {
   };
 
   const addPost = async (post) => {
-    if (editPost) {
-      const response = await api.put(`/blogs/${editPost._id}`, post);
-      setPosts(posts.map(p => (p._id === editPost._id ? response.data : p)));
-      setEditPost(null);
-    } else {
-      const response = await api.post('/blogs', post);
-      setPosts([...posts, response.data]);
+    try {
+      let response;
+      if (editPost) {
+        response = await api.put(`/blogs/${editPost._id}`, post);
+        setPosts(posts.map(p => (p._id === editPost._id ? response.data : p)));
+        setEditPost(null);
+      } else {
+        response = await api.post('/blogs', post);
+        setPosts([...posts, response.data]);
+      }
+    } catch (error) {
+      console.error("Error uploading post:", error.response.data);
     }
   };
 
@@ -43,8 +48,8 @@ const App = () => {
   };
 
   const filteredPosts = posts.filter(post =>
-    post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    post.content.toLowerCase().includes(searchQuery.toLowerCase())
+    (post.title && post.title.toLowerCase().includes(searchQuery.toLowerCase())) ||
+    (post.content && post.content.toLowerCase().includes(searchQuery.toLowerCase()))
   );
 
   return (
