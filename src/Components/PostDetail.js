@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import Breadcrumb from './Breadcrumb';
 
 const PostDetail = ({ posts }) => {
   const { id } = useParams();
@@ -11,6 +12,7 @@ const PostDetail = ({ posts }) => {
 
   return (
     <div>
+      <Breadcrumb postTitle={post.title} />
       <h2>{post.title}</h2>
       {post.imageUrl && <img src={post.imageUrl} alt={post.title} />}
       <p>{post.content}</p>
