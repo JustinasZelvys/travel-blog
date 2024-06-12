@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const BlogPost = ({ post, onDelete, onEdit }) => {
+const BlogPost = ({ post, onDelete }) => {
   return (
     <div>
       {post.imageUrl && <img src={post.imageUrl} alt={post.title} width="100" />}
@@ -10,7 +10,6 @@ const BlogPost = ({ post, onDelete, onEdit }) => {
       <Link to={`/post/${post._id}`}>
         <button>Read More</button>
       </Link>
-      <button onClick={() => onEdit(post)}>Edit</button>
       <button onClick={() => onDelete(post._id)}>Delete</button>
     </div>
   );

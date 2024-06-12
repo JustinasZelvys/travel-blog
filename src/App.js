@@ -24,27 +24,25 @@ const App = () => {
 
   const addPost = async (post) => {
     try {
-      let response;
-      if (editPost) {
-        response = await api.put(`/blogs/${editPost._id}`, post);
-        setPosts(posts.map(p => (p._id === editPost._id ? response.data : p)));
-        setEditPost(null);
-      } else {
-        response = await api.post('/blogs', post);
-        setPosts([...posts, response.data]);
-      }
+      const response = await api.post('/blogs', post);
+      setPosts([...posts, response.data]);
     } catch (error) {
       console.error("Error uploading post:", error.response.data);
+    }
+  };
+
+  const updatePost = async (id, post) => {
+    try {
+      const response = await api.put(`/blogs/${id}`, post);
+      setPosts(posts.map(p => (p._id === id ? response.data : p)));
+    } catch (error) {
+      console.error("Error updating post:", error.response.data);
     }
   };
 
   const deletePost = async (id) => {
     await api.delete(`/blogs/${id}`);
     setPosts(posts.filter(post => post._id !== id));
-  };
-
-  const editPostHandler = (post) => {
-    setEditPost(post);
   };
 
   const filteredPosts = posts.filter(post =>
@@ -62,11 +60,11 @@ const App = () => {
           <Routes>
             <Route path="/" element={
               <>
-                <BlogForm onSave={addPost} editPost={editPost} />
-                <BlogList posts={filteredPosts} onDelete={deletePost} onEdit={editPostHandler} />
+                <BlogForm onSave={addPost} />
+                <BlogList posts={filteredPosts} onDelete={deletePost} />
               </>
             } />
-            <Route path="/post/:id" element={<PostDetail posts={posts} />} />
+            <Route path="/post/:id" element={<PostDetail posts={posts} onUpdate={updatePost} />} />
           </Routes>
         </div>
       </div>

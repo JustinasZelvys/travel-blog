@@ -16,7 +16,8 @@ mongoose.connect('mongodb://localhost:27017/blogDB', {
 const blogSchema = new mongoose.Schema({
   title: String,
   content: String,
-  imageUrl: String
+  imageUrl: String,
+  author: String
 });
 
 const Blog = mongoose.model('Blog', blogSchema);
@@ -32,8 +33,8 @@ app.get('/blogs', async (req, res) => {
 
 app.post('/blogs', async (req, res) => {
   try {
-    const { title, content, imageUrl } = req.body;
-    const blog = new Blog({ title, content, imageUrl });
+    const { title, content, imageUrl, author } = req.body;
+    const blog = new Blog({ title, content, imageUrl, author });
     await blog.save();
     res.send(blog);
   } catch (error) {
@@ -43,8 +44,8 @@ app.post('/blogs', async (req, res) => {
 
 app.put('/blogs/:id', async (req, res) => {
   try {
-    const { title, content, imageUrl } = req.body;
-    const blog = await Blog.findByIdAndUpdate(req.params.id, { title, content, imageUrl }, { new: true });
+    const { title, content, imageUrl, author } = req.body;
+    const blog = await Blog.findByIdAndUpdate(req.params.id, { title, content, imageUrl, author }, { new: true });
     res.send(blog);
   } catch (error) {
     res.status(500).send({ error: error.message });
