@@ -8,7 +8,6 @@ const PostDetail = ({ posts, onUpdate, setSearchQuery }) => {
   const post = posts.find(post => post._id === id);
 
   useEffect(() => {
-    // Clear the search query when the component mounts
     setSearchQuery('');
   }, [setSearchQuery]);
 

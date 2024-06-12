@@ -6,7 +6,6 @@ const BlogList = ({ posts, onDelete }) => {
   const navigate = useNavigate();
 
   const handleReadMore = (id) => {
-    // Navigate to the post detail page and clear the search query
     navigate(`/post/${id}`);
   };
 

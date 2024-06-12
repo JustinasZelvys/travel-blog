@@ -6,6 +6,9 @@ import PostDetail from './components/PostDetail';
 import NavBar from './components/NavBar';
 import CreatePost from './components/CreatePost';
 import Sidebar from './components/Sidebar';
+import Gallery from './components/Gallery';
+import Contact from './components/Contact';
+import Home from './components/Home';
 import api from './api';
 import './App.css';
 
@@ -72,7 +75,8 @@ const App = () => {
         <NavBar />
         <div className="main-content">
           <Routes>
-            <Route path="/" element={
+            <Route path="/" element={<Home />} />
+            <Route path="/blog" element={
               <>
                 <Sidebar links={sidebarLinks} />
                 <div className="content">
@@ -82,6 +86,8 @@ const App = () => {
                 </div>
               </>
             } />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/create" element={<CreatePost onSave={addPost} />} />
             <Route path="/post/:id" element={<PostDetail posts={posts} onUpdate={updatePost} setSearchQuery={setSearchQuery} />} />
           </Routes>

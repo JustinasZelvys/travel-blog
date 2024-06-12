@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './BlogForm.css';
 
 const BlogForm = ({ onSave, editPost }) => {
   const [title, setTitle] = useState('');
@@ -34,6 +35,7 @@ const BlogForm = ({ onSave, editPost }) => {
         required 
       />
       <textarea 
+      className='content-input'
         placeholder="Content" 
         value={content} 
         onChange={(e) => setContent(e.target.value)} 
