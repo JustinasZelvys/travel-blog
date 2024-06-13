@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import BlogList from './components/BlogList';
 import SearchBar from './components/SearchBar';
 import PostDetail from './components/PostDetail';
@@ -9,6 +9,7 @@ import Sidebar from './components/Sidebar';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Home from './components/Home';
+import Hero from './components/Hero';
 import api from './api';
 import './App.css';
 
@@ -73,7 +74,9 @@ const App = () => {
     <Router>
       <div className="App">
         <NavBar />
+        <ConditionalHero />
         <div className="main-content">
+          
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/blog" element={
@@ -95,6 +98,12 @@ const App = () => {
       </div>
     </Router>
   );
+};
+
+const ConditionalHero = () => {
+  const location = useLocation();
+
+  return location.pathname === '/' ? <Hero /> : null;
 };
 
 export default App;

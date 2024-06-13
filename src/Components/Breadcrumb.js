@@ -5,7 +5,7 @@ import './Breadcrumb.css';
 const Breadcrumb = ({ postTitle }) => {
   return (
     <nav className="breadcrumb">
-      <Link to="/">Home</Link> &gt; <span>{postTitle}</span>
+      <Link to="/blog">Blog</Link> &gt; <span>{postTitle}</span>
     </nav>
   );
 };

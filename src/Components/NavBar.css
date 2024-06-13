@@ -1,10 +1,9 @@
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #333;
+  background-color: #000000;
   color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar-logo img {
@@ -33,4 +32,13 @@
 .navbar-links a:hover {
   background-color: #555;
   border-radius: 4px;
+}
+
+.max-width{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 5px auto;
+  margin-top: 20px;
 }

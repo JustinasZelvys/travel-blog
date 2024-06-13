@@ -5,6 +5,7 @@ import './NavBar.css';
 const NavBar = () => {
   return (
     <nav className="navbar">
+      <div className="max-width">
       <div className="navbar-logo">
         <img src="/path-to-your-logo.png" alt="Logo" />
       </div>
@@ -25,6 +26,7 @@ const NavBar = () => {
           <Link to="/create">Create Post</Link>
         </li>
       </ul>
+      </div>
     </nav>
   );
 };
