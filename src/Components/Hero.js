@@ -1,10 +1,9 @@
 import React from 'react';
-import './Hero.css';
 
 const Hero = () => {
   return (
     <div className="hero">
-      <img src="https://rare-gallery.com/uploads/posts/4533822-thailand-thai-hills-rock-nature-water-birds-sky-clouds-walkway-trees-fresh-relaxing-landscape.jpg" alt="Hero" className="hero-image" />
+      <img src="https://cdn.britannica.com/06/96306-050-DFE8AFDC/Khao-Tapu-Ao-Phang-na-Thailand-National-Park.jpg" alt="Hero" className="hero-image" />
       <div className="hero-text">
         <h1>Welcome to Our Travel Blog</h1>
         <p>Explore the world with us</p>
