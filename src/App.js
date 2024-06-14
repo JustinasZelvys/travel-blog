@@ -84,7 +84,6 @@ const App = () => {
               <div className="main-content">
                 <Sidebar links={sidebarLinks} />
                 <div className="content">
-                  <h1>Travel Blog</h1>
                   <SearchBar
                     searchQuery={searchQuery}
                     setSearchQuery={setSearchQuery}

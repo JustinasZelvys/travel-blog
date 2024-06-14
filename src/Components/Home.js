@@ -1,8 +1,11 @@
-import React from 'react';
-import HeroSlideshow from './HeroSlideshow';
-import FeaturedOn from './FeaturedOn';
-import Introduction from './Introduction';
-import BestBackpackingLocations from './BestBackpackingLocations';
+import React from "react";
+import HeroSlideshow from "./HeroSlideshow";
+import FeaturedOn from "./FeaturedOn";
+import Introduction from "./Introduction";
+import BestBackpackingLocations from "./BestBackpackingLocations";
+import GetInTouch from "./GetInTouch";
+import InstagramSection from "./InstagramSection";
+import Footer from "./Footer";
 
 const Home = () => {
   return (
@@ -11,10 +14,9 @@ const Home = () => {
       <FeaturedOn />
       <Introduction />
       <BestBackpackingLocations />
-      <div>
-        <h1>Home</h1>
-        <p>Welcome to the Home page.</p>
-      </div>
+      <GetInTouch />
+      <InstagramSection />
+      <Footer />
     </div>
   );
 };

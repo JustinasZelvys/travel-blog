@@ -1,0 +1,23 @@
+.instagram-section {
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .instagram-section h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .instagram-images {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .instagram-image {
+    width: calc(100% / 6);
+    height: auto;
+    object-fit: cover;
+  }
+  

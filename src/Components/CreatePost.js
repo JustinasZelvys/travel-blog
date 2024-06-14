@@ -6,11 +6,10 @@ const CreatePost = ({ onSave }) => {
   const [content, setContent] = useState('');
   const [imageUrl, setImageUrl] = useState('');
   const [author, setAuthor] = useState('');
-  const [createdAt, setCreatedAt] = useState(new Date());
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSave({ title, content, imageUrl, author, createdAt });
+    onSave({ title, content, imageUrl, author });
   };
 
   return (
@@ -39,12 +38,6 @@ const CreatePost = ({ onSave }) => {
           placeholder="Author"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
-        />
-        <input
-          type="datetime-local"
-          placeholder="Created At"
-          value={createdAt.toISOString().substring(0, 16)}
-          onChange={(e) => setCreatedAt(new Date(e.target.value))}
         />
         <button type="submit">Save</button>
       </form>
