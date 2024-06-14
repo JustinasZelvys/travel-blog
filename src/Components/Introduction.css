@@ -1,0 +1,29 @@
+.introduction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 20px 0;
+    height: 300px; 
+  }
+  
+  .introduction-image {
+    height: 100%;
+    width: auto;
+    margin-right: 20px;
+    border-radius: 8px;
+  }
+  
+  .introduction-text {
+    max-width: 600px; 
+  }
+  
+  .introduction-text h2 {
+    margin-bottom: 10px;
+  }
+  
+  .introduction-text p {
+    margin: 0;
+  }
+  

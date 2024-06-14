@@ -12,7 +12,7 @@ const FeaturedOn = () => {
 
   return (
     <div className="featured-on">
-      <h1>Featured On</h1>
+      <h1>Featured</h1>
       <div className="featured-logos">
         {featuredLogos.map((logo, index) => (
           <img key={index} src={logo} alt={`Featured logo ${index}`} className="featured-logo" />

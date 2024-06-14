@@ -6,8 +6,9 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const HeroSlideshow = () => {
   const images = [
-    'https://cdn.britannica.com/06/96306-050-DFE8AFDC/Khao-Tapu-Ao-Phang-na-Thailand-National-Park.jpg',
-    'https://www.travelandleisure.com/thmb/nDDNqO2EctQhiIfZrxeXTF47zhE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-koh-phi-phi-PLACESTHAILAND1023-09b9d347b3cd4844b4ae19e4e06a9a6d.jpg'
+    'https://afar.brightspotcdn.com/dims4/default/68ef509/2147483647/strip/false/crop/1440x720+0+0/resize/1440x720!/quality/90/?url=https%3A%2F%2Fk3-prod-afar-media.s3.us-west-2.amazonaws.com%2Fbrightspot%2Fcf%2F8a%2F20b4a2c544a58be93512ad67084c%2Fbohler-japankk-4006.jpg',
+    'https://img.taste.com.au/jUGIU1GJ/taste/2020/07/landmark-pagoda-in-doi-inthanon-national-park-at-chiang-mai-thailand-163355-1.jpg',
+    'https://peakvisor.com/photo/SD/New-Zealand-aerial-mountain.jpg'
   ];
 
   const settings = {
