@@ -1,14 +1,14 @@
-import React from 'react';
-import Slider from 'react-slick';
-import './HeroSlideshow.css';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import React from "react";
+import Slider from "react-slick";
+import "./HeroSlideshow.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const HeroSlideshow = () => {
   const images = [
-    'https://afar.brightspotcdn.com/dims4/default/68ef509/2147483647/strip/false/crop/1440x720+0+0/resize/1440x720!/quality/90/?url=https%3A%2F%2Fk3-prod-afar-media.s3.us-west-2.amazonaws.com%2Fbrightspot%2Fcf%2F8a%2F20b4a2c544a58be93512ad67084c%2Fbohler-japankk-4006.jpg',
-    'https://img.taste.com.au/jUGIU1GJ/taste/2020/07/landmark-pagoda-in-doi-inthanon-national-park-at-chiang-mai-thailand-163355-1.jpg',
-    'https://peakvisor.com/photo/SD/New-Zealand-aerial-mountain.jpg'
+    "https://afar.brightspotcdn.com/dims4/default/68ef509/2147483647/strip/false/crop/1440x720+0+0/resize/1440x720!/quality/90/?url=https%3A%2F%2Fk3-prod-afar-media.s3.us-west-2.amazonaws.com%2Fbrightspot%2Fcf%2F8a%2F20b4a2c544a58be93512ad67084c%2Fbohler-japankk-4006.jpg",
+    "https://img.taste.com.au/jUGIU1GJ/taste/2020/07/landmark-pagoda-in-doi-inthanon-national-park-at-chiang-mai-thailand-163355-1.jpg",
+    "https://peakvisor.com/photo/SD/New-Zealand-aerial-mountain.jpg",
   ];
 
   const settings = {
@@ -19,7 +19,7 @@ const HeroSlideshow = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    pauseOnHover: true
+    pauseOnHover: true,
   };
 
   return (
@@ -32,8 +32,10 @@ const HeroSlideshow = () => {
         ))}
       </Slider>
       <div className="hero-text">
-        <h1>Welcome to Our Travel Blog</h1>
-        <p>Explore the world with us</p>
+        <h1>EXPLORE. DREAM .DISCOVER</h1>
+        <p>This is a world travel blog featuring beutiful destinations and hidden places around the globe.</p>
+        <p>Please tag along!</p>
+        <div className="hero-button"><a href="/blog">START EXPLORING</a></div>
       </div>
     </div>
   );

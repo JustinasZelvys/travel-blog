@@ -1,38 +1,69 @@
 .best-backpacking-locations {
-    padding: 20px;
-    margin: 20px 0;
-  }
-  
-  .best-backpacking-locations h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .posts-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  
-  .post-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .post-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  .post-title {
-    margin-top: 10px;
-    font-size: 1rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  
+  padding: 20px;
+  margin: 10px 0;
+  max-width: 1200px;
+}
+
+.best-backpacking-locations h2 {
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 45px;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+}
+
+.best-backpacking-locations p {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 23px;
+  font-family: "Lora", Sans-serif;
+}
+
+.best-b-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.post-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.post-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.post-title {
+  font-size: 23px;
+  text-decoration: none;
+  margin-top: 5px;
+  text-align: center;
+  color: black;
+  font-weight: 600;
+  text-overflow: ellipsis; 
+  width: 380px; 
+  white-space: nowrap; 
+  overflow: hidden; 
+}
+
+.post-card {
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.post-card:hover {
+  transform: scale(1.05);
+}

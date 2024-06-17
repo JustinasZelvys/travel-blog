@@ -4,20 +4,20 @@
   align-items: center;
   justify-content: center;
   height: 200px;
-  padding: 10px;
-  margin: 20px 0;
+  margin: 20px 0 40px;
 }
 
 .featured-on h1 {
   margin-bottom: 20px;
   color: #000000;
-  font-size: 40px;
+  font-size: 50px;
+  font-family: "Oswald", sans-serif;
 }
 
 .featured-logos {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 .featured-logo {

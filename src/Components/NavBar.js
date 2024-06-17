@@ -7,7 +7,7 @@ const NavBar = () => {
     <nav className="navbar">
       <div className="max-width">
       <div className="navbar-logo">
-        <img src="/path-to-your-logo.png" alt="Logo" />
+        <img src="/Logo.png" alt="Logo" />
       </div>
       <ul className="navbar-links">
         <li>
@@ -23,7 +23,8 @@ const NavBar = () => {
           <Link to="/contact">Contact</Link>
         </li>
         <li>
-          <Link to="/create">Create Post</Link>
+          <span className='createButton'><Link to="/create">Create Post</Link></span>
+          
         </li>
       </ul>
       </div>
