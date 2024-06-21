@@ -9,7 +9,7 @@ const GetInTouch = () => {
         Feel free to contact me if you have travel questions, comments, or suggestions!
         I'll try to get back to you!
       </p>
-      <i class="fa fa-telegram"></i>
+      <i className="fab fa-telegram"></i>
     </div>
   );
 };

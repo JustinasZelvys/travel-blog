@@ -1,18 +1,23 @@
-import React from 'react';
-import './Sidebar.css';
+import React from "react";
+import "./Sidebar.css";
 
-const Sidebar = ({ links }) => {
+const Sidebar = () => {
   return (
     <div className="sidebar">
-      <h2>Other Great Pages for Travelers</h2>
-      {links.map((link, index) => (
-        <div className="sidebar-block" key={index} onClick={() => window.open(link.url, "_blank")}>
-          <img src={link.image} alt={link.title} />
-          <div className="sidebar-block-text">
-            <h3>{link.title}</h3>
-          </div>
-        </div>
-      ))}
+      <h2>ABOUT ME</h2>
+      <div className="sidebar-content">
+        <img
+          src="/thailand.jpg"
+          alt="About Me"
+          className="sidebar-photo"
+        />
+        <p>
+          Hey there! I'm Justinas Želvys, an Lithuanina who has been traveling the
+          world full time for 2 years now. I'am usually in
+          my second home Bali, but my journeys takes me to destinations all
+          over the world.
+        </p>
+      </div>
     </div>
   );
 };

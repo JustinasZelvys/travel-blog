@@ -3,17 +3,17 @@ import './BlogPost.css';
 
 const BlogPost = ({ post, onDelete, onReadMore }) => {
   return (
-    <div className="blog-post">
-      <div className="blog-post-image">
-        {post.imageUrl && <img src={post.imageUrl} alt={post.title} />}
-      </div>
-      <div className="blog-post-content">
-        <h2>{post.title}</h2>
-        <p>{post.content.substring(0, 100)}...</p>
-        <div className="blog-post-buttons">
-          <button onClick={() => onReadMore(post._id)}>Read More</button>
-          <button onClick={() => onDelete(post._id)}>Delete</button>
-        </div>
+    <div className="post-card">
+      <img 
+        src={post.imageUrl} 
+        alt={post.title} 
+        className="post-image" 
+        onClick={() => onReadMore(post._id)}
+      />
+      <h3 className="post-title" onClick={() => onReadMore(post._id)}>{post.title}</h3>
+      <div className="post-buttons">
+        <button onClick={() => onReadMore(post._id)} className="btn">Read More</button>
+        <button onClick={() => onDelete(post._id)} className="btn">Delete</button>
       </div>
     </div>
   );

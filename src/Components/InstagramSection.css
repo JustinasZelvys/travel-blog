@@ -1,25 +1,24 @@
 .instagram-section {
-    padding: 0px;
-    margin: 0;
-    text-align: center;
-  }
-  
-  .instagram-section h2 {
-    margin-bottom: 10px;
-    font-size: 2rem;
-    color: #333;
-    padding-bottom: 20px;
-  }
-  
-  .instagram-images {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-  }
-  
-  .instagram-image {
-    width: calc(100% / 6);
-    height: auto;
-    object-fit: cover;
-  }
-  
+  padding: 0px;
+  margin: 0;
+  text-align: center;
+}
+
+.instagram-section h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #333;
+  padding-bottom: 20px;
+}
+
+.instagram-images {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.instagram-image {
+  width: calc(100% / 6);
+  height: auto;
+  object-fit: cover;
+}
