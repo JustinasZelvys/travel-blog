@@ -1,6 +1,6 @@
 .instagram-section {
-    padding: 20px;
-    margin: 20px 0;
+    padding: 0px;
+    margin: 0;
     text-align: center;
   }
   
@@ -8,11 +8,13 @@
     margin-bottom: 10px;
     font-size: 2rem;
     color: #333;
+    padding-bottom: 20px;
   }
   
   .instagram-images {
     display: flex;
     justify-content: center;
+    margin: 0;
   }
   
   .instagram-image {

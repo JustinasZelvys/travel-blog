@@ -12,6 +12,32 @@
   font-family: "Oswald", sans-serif;
 }
 
+.line {
+  overflow: hidden;
+  text-align: center;
+}
+
+.line::before,
+.line::after {
+  background-color: #DEDEDE;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 20%;
+}
+
+.line::before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.line::after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
 .best-backpacking-locations p {
   text-align: center;
   margin-bottom: 20px;

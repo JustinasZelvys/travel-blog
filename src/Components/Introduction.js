@@ -10,7 +10,7 @@ const Introduction = () => {
         className="introduction-image"
       />
       <div className="introduction-text">
-        <h2>Thanks For Looking!</h2>
+        <h4>Thanks For Looking!</h4>
         <p>
           I'm Justin, the guy behind this website. I'm an Lithuanian who's
           been traveling the world full time.

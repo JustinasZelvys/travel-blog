@@ -22,7 +22,7 @@ const BestBackpackingLocations = () => {
   return (
     <div className="best-b-center">
     <div className="best-backpacking-locations">
-      <h2>Travel Guides</h2>
+      <h2 className='line'>Travel Guides</h2>
       <p>Popular travel blog posts & guides</p>
       <div className="post-grid">
         {posts.map((post) => (
