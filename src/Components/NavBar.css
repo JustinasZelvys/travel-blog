@@ -54,7 +54,7 @@
 .max-width {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 100%; 
   max-width: 1200px;
   margin: 0px auto;
   margin-top: 10px;

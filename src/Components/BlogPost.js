@@ -13,7 +13,7 @@ const BlogPost = ({ post, onDelete, onReadMore }) => {
       <h3 className="post-title" onClick={() => onReadMore(post._id)}>{post.title}</h3>
       <div className="post-buttons">
         <button onClick={() => onReadMore(post._id)} className="btn">Read More</button>
-        <button onClick={() => onDelete(post._id)} className="btn">Delete</button>
+        <button onClick={() => {onDelete(post._id); alert("Post Removed!")}} className="btn">Delete</button>
       </div>
     </div>
   );

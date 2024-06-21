@@ -65,13 +65,6 @@ const App = () => {
         post.content.toLowerCase().includes(searchQuery.toLowerCase()))
   );
 
-  const sidebarLinks = [
-    { image: "url1.jpg", title: "Travel Page 1", url: "http://example1.com" },
-    { image: "url2.jpg", title: "Travel Page 2", url: "http://example2.com" },
-    { image: "url3.jpg", title: "Travel Page 3", url: "http://example3.com" },
-    { image: "url4.jpg", title: "Travel Page 4", url: "http://example4.com" },
-  ];
-
   return (
     <Router>
       <div className="App">
@@ -82,7 +75,7 @@ const App = () => {
             path="/blog"
             element={
               <div className="main-content">
-                <Sidebar links={sidebarLinks} />
+                <Sidebar />
                 <div className="content">
                   <SearchBar
                     searchQuery={searchQuery}

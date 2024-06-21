@@ -22,3 +22,9 @@
 }
 
 @import "@fortawesome/fontawesome-free/css/all.css";
+
+@media (max-width: 1000px) {
+  .search-bar{
+    margin-left: 15px;
+  }
+}
