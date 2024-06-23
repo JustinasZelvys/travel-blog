@@ -33,7 +33,7 @@ const HeroSlideshow = () => {
       </Slider>
       <div className="hero-text">
         <h1>EXPLORE. DREAM .DISCOVER</h1>
-        <p>This is a world travel blog featuring beutiful destinations and hidden places around the globe.</p>
+        <p>This is a world travel blog featuring beautiful destinations and hidden places around the globe.</p>
         <p>Please tag along!</p>
         <div className="hero-button"><a href="/blog">START EXPLORING</a></div>
       </div>
