@@ -10,6 +10,10 @@ const CreatePost = ({ onSave }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     onSave({ title, content, imageUrl, author });
+    setTitle('');
+    setContent('');
+    setImageUrl('');
+    setAuthor('');
   };
 
   return (
