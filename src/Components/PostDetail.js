@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import Breadcrumb from './Breadcrumb';
 import BlogForm from './BlogForm';
 import './PostDetail.css';
+import Sidebar from './Sidebar'; // Import Sidebar
 
 const PostDetail = ({ posts, onUpdate, setSearchQuery }) => {
   const { id } = useParams();
@@ -27,6 +28,12 @@ const PostDetail = ({ posts, onUpdate, setSearchQuery }) => {
     setIsEditing(false);
   };
 
+  // Placeholder for the about me data
+  const aboutMe = {
+    image: 'https://via.placeholder.com/150',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula dapibus bibendum.'
+  };
+
   return (
     <div className="post-detail-container">
       <Breadcrumb postTitle={post.title} />
@@ -36,12 +43,19 @@ const PostDetail = ({ posts, onUpdate, setSearchQuery }) => {
           <h2>{post.title}</h2>
         </div>
       </div>
-      <p className="post-content">{post.content}</p>
-      <p className="post-author"><strong>Author:</strong> {post.author}</p>
-      <button onClick={handleEditClick}>Edit</button>
-      {isEditing && (
-        <BlogForm onSave={handleUpdate} editPost={post} />
-      )}
+      <div className="content-sidebar-wrapper">
+        <div className="post-content-wrapper">
+          <p className="post-content">{post.content}</p>
+          <p className="post-author"><strong>Author:</strong> {post.author}</p>
+          <button onClick={handleEditClick}>Edit</button>
+          {isEditing && (
+            <BlogForm onSave={handleUpdate} editPost={post} />
+          )}
+        </div>
+        <div className="sidebar-wrapper">
+          <Sidebar aboutMe={aboutMe} />
+        </div>
+      </div>
     </div>
   );
 };

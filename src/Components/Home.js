@@ -5,7 +5,6 @@ import Introduction from "./Introduction";
 import BestBackpackingLocations from "./BestBackpackingLocations";
 import GetInTouch from "./GetInTouch";
 import InstagramSection from "./InstagramSection";
-import Footer from "./Footer";
 
 const Home = () => {
   return (
@@ -16,7 +15,6 @@ const Home = () => {
       <BestBackpackingLocations />
       <GetInTouch />
       <InstagramSection />
-      <Footer />
     </div>
   );
 };

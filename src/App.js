@@ -9,6 +9,7 @@ import Sidebar from "./components/Sidebar";
 import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
 import Home from "./components/Home";
+import Footer from "./components/Footer";
 import api from "./api";
 import "./App.css";
 
@@ -100,6 +101,7 @@ const App = () => {
             }
           />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
