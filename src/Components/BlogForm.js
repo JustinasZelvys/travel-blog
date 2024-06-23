@@ -26,36 +26,38 @@ const BlogForm = ({ onSave, editPost }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input 
-        type="text" 
-        placeholder="Title" 
-        value={title} 
-        onChange={(e) => setTitle(e.target.value)} 
-        required 
-      />
-      <textarea 
-      className='content-input'
-        placeholder="Content" 
-        value={content} 
-        onChange={(e) => setContent(e.target.value)} 
-        required 
-      ></textarea>
-      <input 
-        type="text" 
-        placeholder="Image URL" 
-        value={imageUrl} 
-        onChange={(e) => setImageUrl(e.target.value)} 
-      />
-      <input 
-        type="text" 
-        placeholder="Author" 
-        value={author} 
-        onChange={(e) => setAuthor(e.target.value)} 
-        required 
-      />
-      <button type="submit">{editPost ? 'Update' : 'Save'}</button>
-    </form>
+    <div className="blog-form-container">
+      <form onSubmit={handleSubmit} className="blog-form">
+        <input 
+          type="text" 
+          placeholder="Title" 
+          value={title} 
+          onChange={(e) => setTitle(e.target.value)} 
+          required 
+        />
+        <textarea 
+          className="content-input"
+          placeholder="Content" 
+          value={content} 
+          onChange={(e) => setContent(e.target.value)} 
+          required 
+        ></textarea>
+        <input 
+          type="text" 
+          placeholder="Image URL" 
+          value={imageUrl} 
+          onChange={(e) => setImageUrl(e.target.value)} 
+        />
+        <input 
+          type="text" 
+          placeholder="Author" 
+          value={author} 
+          onChange={(e) => setAuthor(e.target.value)} 
+          required 
+        />
+        <button type="submit">{editPost ? 'Update' : 'Save'}</button>
+      </form>
+    </div>
   );
 };
 

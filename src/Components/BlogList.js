@@ -11,6 +11,7 @@ const BlogList = ({ posts, onDelete }) => {
   };
 
   return (
+    <div>
     <div className="blog-list">
       {posts.map(post => (
         <BlogPost 
@@ -20,6 +21,7 @@ const BlogList = ({ posts, onDelete }) => {
           onReadMore={handleReadMore} 
         />
       ))}
+    </div>
     </div>
   );
 };

@@ -1,4 +1,43 @@
-.content-input{
-    height: 150px;
+.blog-form-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .blog-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .blog-form input,
+  .blog-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  .blog-form textarea.content-input {
+    height: 550px;
     max-width: 100%;
-}
+    white-space: pre-wrap; /* Ensures that text wraps as it appears in the textarea */
+    overflow-wrap: break-word; /* Ensures that long words break to fit within the textarea */
+  }
+  
+  .blog-form button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 300px;
+  }
+  
+  .blog-form button:hover {
+    background-color: #0056b3;
+  }
+  

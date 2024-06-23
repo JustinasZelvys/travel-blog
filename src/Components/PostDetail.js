@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Breadcrumb from './Breadcrumb';
 import BlogForm from './BlogForm';
+import './PostDetail.css';
 
 const PostDetail = ({ posts, onUpdate, setSearchQuery }) => {
   const { id } = useParams();
@@ -27,12 +28,16 @@ const PostDetail = ({ posts, onUpdate, setSearchQuery }) => {
   };
 
   return (
-    <div>
+    <div className="post-detail-container">
       <Breadcrumb postTitle={post.title} />
-      <h2>{post.title}</h2>
-      {post.imageUrl && <img src={post.imageUrl} alt={post.title} />}
-      <p>{post.content}</p>
-      <p><strong>Author:</strong> {post.author}</p>
+      <div className="image-container">
+        {post.imageUrl && <img src={post.imageUrl} alt={post.title} className="post-image2" />}
+        <div className="image-overlay">
+          <h2>{post.title}</h2>
+        </div>
+      </div>
+      <p className="post-content">{post.content}</p>
+      <p className="post-author"><strong>Author:</strong> {post.author}</p>
       <button onClick={handleEditClick}>Edit</button>
       {isEditing && (
         <BlogForm onSave={handleUpdate} editPost={post} />

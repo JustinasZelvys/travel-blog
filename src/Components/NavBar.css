@@ -3,6 +3,7 @@
   color: white;
   top: 0;
   z-index: 1000;
+  padding-bottom: 15px;
 }
 
 .navbar-logo img {

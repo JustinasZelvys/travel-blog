@@ -12,11 +12,13 @@ const FeaturedOn = () => {
 
   return (
     <div className="featured-on">
+      <div className='paper'>
       <h1>Featured</h1>
       <div className="featured-logos">
         {featuredLogos.map((logo, index) => (
           <img key={index} src={logo} alt={`Featured logo ${index}`} className="featured-logo" />
         ))}
+      </div>
       </div>
     </div>
   );
