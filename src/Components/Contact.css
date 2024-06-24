@@ -2,16 +2,22 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .contact-hero {
   position: relative;
   width: 100%;
   height: 300px;
-  background-image: url("https://via.placeholder.com/1200x300"); /* Replace with your hero image URL */
+  background-image: url("https://www.thehotelguru.com/_images/39/16/3916c5c5da57ca73407c688696623a81/java-s1180x560.jpg");
   background-size: cover;
   background-position: center;
   margin-bottom: 20px;
+}
+
+.contact-hero h1 {
+  font-size: 40px;
 }
 
 .contact-hero .overlay {
@@ -31,7 +37,8 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
+  width: 80%;
 }
 
 .form-group {
@@ -62,15 +69,50 @@ textarea.error {
 }
 
 button {
-  padding: 10px 20px;
+  width: 150px;
+  padding: 10px 0px;
   border: none;
   border-radius: 4px;
   background-color: #007bff;
   color: white;
   font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 button:hover {
   background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    gap: 15px;
+  }
+
+  .contact-hero h1 {
+    font-size: 30px;
+  }
+
+  .contact-hero .overlay {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-form {
+    gap: 10px;
+  }
+
+  .contact-hero h1 {
+    font-size: 24px;
+  }
+
+  .contact-hero .overlay {
+    font-size: 1.5rem;
+  }
+
+  input,
+  textarea {
+    font-size: 0.875rem;
+  }
 }
