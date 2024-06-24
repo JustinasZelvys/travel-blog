@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import './CreatePost.css';
+import React, { useState } from "react";
+import "./CreatePost.css";
 
 const CreatePost = ({ onSave }) => {
-  const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
-  const [imageUrl, setImageUrl] = useState('');
-  const [author, setAuthor] = useState('');
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
+  const [author, setAuthor] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     onSave({ title, content, imageUrl, author });
-    setTitle('');
-    setContent('');
-    setImageUrl('');
-    setAuthor('');
+    setTitle("");
+    setContent("");
+    setImageUrl("");
+    setAuthor("");
   };
 
   return (

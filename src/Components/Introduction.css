@@ -40,6 +40,10 @@
   padding-right: 20px;
 }
 
+.introduction-text span{
+  color: #ff8a65;
+}
+
 @media (max-width: 768px) {
   .introduction {
     flex-direction: column;

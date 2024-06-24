@@ -19,7 +19,7 @@
 
 .line::before,
 .line::after {
-  background-color: #DEDEDE;
+  background-color: #dedede;
   content: "";
   display: inline-block;
   height: 1px;
@@ -107,10 +107,10 @@
   text-align: center;
   color: black;
   font-weight: 600;
-  text-overflow: ellipsis; 
-  width: 100%; 
-  white-space: nowrap; 
-  overflow: hidden; 
+  text-overflow: ellipsis;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .post-card {

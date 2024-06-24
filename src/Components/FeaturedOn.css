@@ -33,7 +33,7 @@ h1 {
 
 h1::before,
 h1::after {
-  background-color: #DEDEDE;
+  background-color: #dedede;
   content: "";
   display: inline-block;
   height: 1px;
@@ -62,11 +62,11 @@ h1::after {
   .featured-logos {
     gap: 15px;
   }
-  
+
   .featured-logo {
     height: 70px;
   }
-  
+
   .featured-on h1 {
     font-size: 40px;
   }
@@ -76,11 +76,11 @@ h1::after {
   .featured-logos {
     gap: 10px;
   }
-  
+
   .featured-logo {
     height: 60px;
   }
-  
+
   .featured-on h1 {
     font-size: 35px;
   }
@@ -90,11 +90,11 @@ h1::after {
   .featured-logos {
     gap: 5px;
   }
-  
+
   .featured-logo {
     height: 50px;
   }
-  
+
   .featured-on h1 {
     font-size: 30px;
   }

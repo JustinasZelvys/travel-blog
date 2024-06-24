@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './NavBar.css';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./NavBar.css";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,22 +20,32 @@ const NavBar = () => {
           <div className="burger-bar"></div>
           <div className="burger-bar"></div>
         </div>
-        <ul className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>
+        <ul className={`navbar-links ${isMenuOpen ? "open" : ""}`}>
           <li>
-            <Link to="/" onClick={handleMenuToggle}>Home</Link>
+            <Link to="/" onClick={handleMenuToggle}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/blog" onClick={handleMenuToggle}>Blog</Link>
+            <Link to="/blog" onClick={handleMenuToggle}>
+              Blog
+            </Link>
           </li>
           <li>
-            <Link to="/gallery" onClick={handleMenuToggle}>Gallery</Link>
+            <Link to="/gallery" onClick={handleMenuToggle}>
+              Gallery
+            </Link>
           </li>
           <li>
-            <Link to="/contact" onClick={handleMenuToggle}>Contact</Link>
+            <Link to="/contact" onClick={handleMenuToggle}>
+              Contact
+            </Link>
           </li>
           <li>
-            <span className='createButton'>
-              <Link to="/create" onClick={handleMenuToggle}>Create Post</Link>
+            <span className="createButton">
+              <Link to="/create" onClick={handleMenuToggle}>
+                Create Post
+              </Link>
             </span>
           </li>
         </ul>

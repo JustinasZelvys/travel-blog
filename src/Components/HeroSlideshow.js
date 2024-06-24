@@ -8,7 +8,7 @@ const HeroSlideshow = () => {
   const images = [
     "https://hips.hearstapps.com/hmg-prod/images/ama-dablam-mountain-peak-view-from-chola-pass-royalty-free-image-1623254695.jpg",
     "https://peakvisor.com/photo/SD/New-Zealand-aerial-mountain.jpg",
-    "https://www.voyagescribe.com/wp-content/uploads/2020/05/paul-vincent-roll-c61jL_NpAn8-unsplash.jpg"
+    "https://www.voyagescribe.com/wp-content/uploads/2020/05/paul-vincent-roll-c61jL_NpAn8-unsplash.jpg",
   ];
 
   const settings = {
@@ -33,9 +33,14 @@ const HeroSlideshow = () => {
       </Slider>
       <div className="hero-text">
         <h1>EXPLORE. DREAM .DISCOVER</h1>
-        <p>This is a world travel blog featuring beautiful destinations and hidden places around the globe.</p>
+        <p>
+          This is a world travel blog featuring beautiful destinations and
+          hidden places around the globe.
+        </p>
         <p>Please tag along!</p>
-        <div className="hero-button"><a href="/blog">START EXPLORING</a></div>
+        <div className="hero-button">
+          <a href="/blog">START EXPLORING</a>
+        </div>
       </div>
     </div>
   );

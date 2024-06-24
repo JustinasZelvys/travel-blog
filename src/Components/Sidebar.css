@@ -37,7 +37,6 @@
   color: #000000;
 }
 
-/* Hide sidebar on tablet and mobile sizes */
 @media (max-width: 768px) {
   .sidebar {
     display: none;

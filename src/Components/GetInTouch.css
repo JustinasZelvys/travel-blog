@@ -2,7 +2,7 @@
   position: relative;
   padding: 60px;
   margin: 20px 0 0;
-  background-image: url('https://www.state.gov/wp-content/uploads/2019/04/Thailand-2107x1406-2.jpg');
+  background-image: url("https://www.state.gov/wp-content/uploads/2019/04/Thailand-2107x1406-2.jpg");
   text-align: center;
   z-index: 1;
   overflow: hidden;
@@ -10,7 +10,7 @@
 
 .get-in-touch h2 {
   margin-bottom: 10px;
-  font-size: 2rem; 
+  font-size: 2rem;
   color: white;
   z-index: 3;
   position: relative;

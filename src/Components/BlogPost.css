@@ -21,12 +21,12 @@
   transition: background-color 0.3s;
 }
 
-.btn:last-child{
+.btn:last-child {
   background-color: #33333300;
   color: #333;
 }
 
-.btn:last-child:hover{
+.btn:last-child:hover {
   color: white;
   background-color: rgb(223, 3, 3);
 }

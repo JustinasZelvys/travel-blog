@@ -75,7 +75,6 @@ const App = () => {
             path="/blog"
             element={
               <div className="main-content">
-                
                 <div className="content">
                   <SearchBar
                     searchQuery={searchQuery}
