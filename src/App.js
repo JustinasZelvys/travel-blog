@@ -5,7 +5,6 @@ import SearchBar from "./components/SearchBar";
 import PostDetail from "./components/PostDetail";
 import NavBar from "./components/NavBar";
 import CreatePost from "./components/CreatePost";
-import Sidebar from "./components/Sidebar";
 import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
 import Home from "./components/Home";
@@ -76,7 +75,7 @@ const App = () => {
             path="/blog"
             element={
               <div className="main-content">
-                <Sidebar />
+                
                 <div className="content">
                   <SearchBar
                     searchQuery={searchQuery}

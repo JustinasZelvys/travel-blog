@@ -6,9 +6,9 @@ import "slick-carousel/slick/slick-theme.css";
 
 const HeroSlideshow = () => {
   const images = [
-    "https://afar.brightspotcdn.com/dims4/default/68ef509/2147483647/strip/false/crop/1440x720+0+0/resize/1440x720!/quality/90/?url=https%3A%2F%2Fk3-prod-afar-media.s3.us-west-2.amazonaws.com%2Fbrightspot%2Fcf%2F8a%2F20b4a2c544a58be93512ad67084c%2Fbohler-japankk-4006.jpg",
-    "https://img.taste.com.au/jUGIU1GJ/taste/2020/07/landmark-pagoda-in-doi-inthanon-national-park-at-chiang-mai-thailand-163355-1.jpg",
+    "https://hips.hearstapps.com/hmg-prod/images/ama-dablam-mountain-peak-view-from-chola-pass-royalty-free-image-1623254695.jpg",
     "https://peakvisor.com/photo/SD/New-Zealand-aerial-mountain.jpg",
+    "https://www.voyagescribe.com/wp-content/uploads/2020/05/paul-vincent-roll-c61jL_NpAn8-unsplash.jpg"
   ];
 
   const settings = {

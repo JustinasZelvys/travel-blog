@@ -3,13 +3,12 @@
   color: white;
   top: 0;
   z-index: 1000;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
   position: relative;
 }
 
 .navbar-logo img {
   height: 50px;
-  margin-bottom: -10px;
 }
 
 .navbar-links {
@@ -75,6 +74,7 @@
   width: 30px;
   height: 20px;
   cursor: pointer;
+  margin: 13px;
 }
 
 .burger-bar {
@@ -91,11 +91,13 @@
     position: absolute;
     top: 60px;
     right: 0;
-    width: 200px;
+    width: 130px;
     height: auto;
     padding-top: 20px;
     padding-left: 10px;
     transition: transform 0.3s ease-in-out;
+    text-align: center;
+    padding: 5px 0px;
   }
 
   .navbar-links.open {
@@ -110,4 +112,10 @@
   .burger-menu {
     display: flex;
   }
+
+  .navbar-logo img {
+    height: 45px;
+    margin-left: 7px;
+  }
+
 }

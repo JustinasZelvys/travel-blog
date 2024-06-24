@@ -13,6 +13,7 @@
 
 .instagram-images {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 0;
 }
@@ -21,4 +22,22 @@
   width: calc(100% / 6);
   height: auto;
   object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+  .instagram-image {
+    width: calc(100% / 4);
+  }
+}
+
+@media (max-width: 768px) {
+  .instagram-image {
+    width: calc(100% / 3);
+  }
+}
+
+@media (max-width: 480px) {
+  .instagram-image {
+    width: calc(100% / 2);
+  }
 }

@@ -14,7 +14,7 @@ const InstagramSection = () => {
   return (
     <div className="instagram-section">
       <h2>
-      <i className="fab fa-instagram fa"></i>Instagram
+        <i className="fab fa-instagram fa"></i>Instagram
       </h2>
       <div className="instagram-images">
         {instagramImages.map((url, index) => (
