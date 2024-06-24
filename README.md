@@ -40,12 +40,14 @@ To run this project on your local machine, follow these steps:
 
     ```sh
     npm start
+    node index.js
     ```
 
     This will start the development server on `http://localhost:3000`.
 
 4. **Run the backend server:**
 
+    You will need MongoDB Atlas (Free version is used)
     Make sure you have a backend server running to handle API requests. If you don't have one, you can set up a simple Express server or use any backend of your choice. Ensure it runs on `http://localhost:5000` or update the API URLs in the project accordingly.
 
 ## Usage
