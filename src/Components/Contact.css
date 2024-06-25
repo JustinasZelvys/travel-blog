@@ -88,6 +88,7 @@ button:hover {
 @media (max-width: 768px) {
   .contact-form {
     gap: 15px;
+    margin-bottom: 125px;
   }
 
   .contact-hero h1 {
@@ -97,6 +98,8 @@ button:hover {
   .contact-hero .overlay {
     font-size: 2rem;
   }
+
+
 }
 
 @media (max-width: 576px) {
